@@ -1,0 +1,64 @@
+/*MEDIA QUERIS*/
+
+@media screen and (min-width:992px) {
+    /*Header y nav*/
+    .header{
+        .header__title{
+            font-size: 4rem;
+        }
+        .nav{
+            .cont-nav{
+                .nav__button {
+                    display: none;
+                }
+            }
+            .menu{
+                position: absolute;
+                height: auto;
+                width: 100%;
+                margin-left: 5rem;
+                background-color: transparent;
+                .navbar-nav{
+                    background-color: rgba(0, 0, 0, 0.378);
+                    a{
+                        color: white;
+                        padding: 0 2rem;
+                        font-weight: lighter;
+                        margin-bottom: 1.2rem;
+                    }
+                }
+            }
+        }
+    } 
+    /*Footer*/
+    .footer{
+        .footer__cont{
+            justify-content: start;
+            margin-left: 5rem;
+            .footer__text{
+                padding: 0 2rem;
+            }
+        }
+    }
+    /*Main-Index*/
+    .index-main{
+        .index-text {
+            .index-text__title{
+                font-size: 4rem;
+            }
+            .index-text__days{
+                font-size: 3rem;
+            }
+            .index-text__hours{
+                font-size: 2rem;
+            }
+        }
+    }
+    /*Main-Galeria*/
+    .galeria-main{
+        margin-top: 2rem;
+        .carousel{
+            width: 85%;
+        }
+    }
+}

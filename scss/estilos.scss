@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*IMPORTS*/
+@import "base/variables";
+@import "components/header";
+@import "components/aside";
+@import "components/main-index";
+@import "components/main-galeria";
+@import "components/footer";
+@import "components/mediaqueris";
+
+/*Layout con Grid -index.html*/
+.grid-container-index{
+    height: 100vh;
+    background-image: url(../img/backg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: grid;
+    grid-template-areas: 
+    "header header"
+    "aside index-main"
+    "footer footer";
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: 1fr 3fr;
+    
+}
+/*Layout con Grid -galeria.html*/
+.grid-container-galeria{
+    height: 100vh;
+    background-image: url(../img/backg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: grid;
+    grid-template-areas: 
+    "header header"
+    "aside galeria-main"
+    "footer footer";
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: 1fr 3fr;
+    
+}

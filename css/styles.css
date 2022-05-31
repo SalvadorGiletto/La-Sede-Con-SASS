@@ -1,0 +1,138 @@
+
+/*RESET*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*Layout con Grid -index.html*/
+.grid-container-index{
+    height: 100vh;
+    background-image: linear-gradient(rgba(16,16,16,.7), rgba(16,16,16.7)), url(../img/la-sede-oliva.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    display: grid;
+    grid-template-areas: 
+    "header header"
+    "aside index-main"
+    "footer footer";
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: auto 2fr;
+}
+/*Estilos del Header (mobile first)*/
+.header {
+    grid-area: header;
+
+    display: grid;
+    grid-template-areas: "nav title";
+    grid-template-columns: auto 1fr;
+    align-items: center;
+}
+.header__title {
+    grid-area: title;
+
+    font-family: 'Bebas Neue', cursive;
+    font-size: 3rem;
+    margin-left: 1rem;
+    
+}
+.header__title a{
+    text-decoration: none;
+    color: #ffffff;
+}
+
+/*Estilos del nav (mobile first)*/
+.nav {
+    grid-area: nav;
+    position: relative;
+    top: 0;
+}
+.nav__button {
+    background-color: transparent;
+    border: none;
+    margin-left: 1rem;
+}
+.nav__icon {
+    font-size: 1.5rem;
+    color: #ffffff;
+}
+
+.menu {
+    position: absolute;
+    top: 3.2rem;
+    background-color: #a99561e4;
+    height: auto;
+    width: 70vw;
+    transition-duration: 0.5s;
+}
+
+/*Estilos del aside (mobile first)*/
+
+.aside {
+    grid-area: aside;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.aside__social {
+    transform: rotate(-90deg);
+    
+}
+.aside__link {
+    text-decoration: none;
+    color: #ffffff;
+    font-family: 'Roboto', sans-serif;
+}
+
+/*Estilos del main-index (mobile first)*/
+.index-main {
+    grid-area: index-main;
+
+    color: #ffffff;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+.index-text{
+    margin-right: 1rem;
+    width: 65%;
+}
+.index-text .index-text__title{
+    background-color: #a995617c;
+    font-size: 2rem;
+    font-weight: lighter;
+    text-transform: uppercase;
+    padding: 0.5rem;
+}
+.index-text .index-text__days{
+    background-color: #a995617c;
+    font-weight: lighter;
+    margin:2rem 0;
+    padding: 0.5rem;
+}
+.index-text .index-text__hours{
+    background-color: #a995617c;
+    font-weight: lighter;
+    padding: 0.5rem;
+}
+.index-text__span {
+    display: block;
+}
+
+
+
+
+
+
+
+
+
+.footer {
+    grid-area: footer;
+    color: white;
+    border: 2px solid white;
+}
+

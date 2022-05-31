@@ -1,0 +1,36 @@
+/*Estilos del main-index (mobile first)*/
+.index-main {
+    grid-area: index-main;
+    color: #ffffff;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    .index-text{
+        margin-right: 1rem;
+        width: 85%;
+        .index-text__title{
+            background-color: #7b7d50df;
+            font-size: 3rem;
+            font-weight: lighter;
+            text-transform: uppercase;
+            padding: 0.5rem;
+        }
+        .index-text__days{
+            background-color: #7b7d50df;
+            font-size: 2rem;
+            font-weight: lighter;
+            margin:2rem 0;
+            padding: 0.5rem;
+        }
+        .index-text__hours{
+            background-color: #7b7d50df;
+            font-size: 1.5rem;
+            font-weight: lighter;
+            padding: 0.5rem;
+            .index-text__span {
+                display: block;
+            }
+        }
+    }
+}

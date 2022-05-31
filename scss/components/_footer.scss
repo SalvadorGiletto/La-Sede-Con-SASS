@@ -1,0 +1,12 @@
+.footer {
+    grid-area: footer;
+    color: white;
+    .footer__cont{
+        display: flex;
+        justify-content: space-around;
+        .footer__text {
+            font-size: 1.1rem;
+            font-weight: lighter;
+        }
+    }
+}

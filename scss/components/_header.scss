@@ -1,0 +1,54 @@
+.header {
+    grid-area: header;
+    display: grid;
+    grid-template-areas: "nav title";
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    .header__title {
+        grid-area: title;
+        font-family: 'Bebas Neue', cursive;
+        font-size: $title-size;
+        margin-left: 1rem;
+        margin-top: 1.2rem;
+        a{
+            text-decoration: none;
+            color: #ffffff;
+        }
+    } 
+    .nav {
+        grid-area: nav;
+        position: relative;
+        top: 0.5rem;
+        .cont-nav{
+            .nav__button {
+                background-color: transparent;
+                border: none;
+                margin-left: 1rem;
+                .nav__icon {
+                    font-size: 1.5rem;
+                    color: $primary-color;
+                }
+            }
+        } 
+        
+        .menu {
+            font-size: 1.5rem;
+            position: absolute;
+            top: 3.2rem;
+            background-color: $menu-color;
+            height: 100vh;
+            width: 100vw;
+            transition-duration: 0.5s;
+            z-index: 1;
+        
+            ul{
+                .nav-item{
+                    margin-left: 1rem;
+                    margin-top: 2rem;
+                    font-weight: 500;
+                    width: 10rem;
+                }
+            }
+        }
+    }
+} 
