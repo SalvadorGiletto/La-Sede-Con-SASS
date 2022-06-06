@@ -63,12 +63,12 @@
 
 /*Estilos del aside (mobile first)*/
 .aside {
+  height: 80vh;
   grid-area: aside;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-items: flex-start;
-  margin-left: -1rem;
 }
 
 .aside .aside__social {
@@ -78,7 +78,8 @@
 .aside .aside__social .aside__link {
   text-decoration: none;
   color: #ffffff;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
 }
 
 /*Estilos del main-index (mobile first)*/
@@ -126,35 +127,157 @@
 .galeria-main {
   grid-area: galeria-main;
   width: 100%;
+  margin-bottom: 2rem;
+}
+
+.galeria-main .img-cont {
   display: flex;
   flex-direction: column;
+  justify-content: none;
+  align-items: none;
+}
+
+.galeria-main .img-cont .img {
+  display: flex;
   justify-content: center;
-  align-items: center;
 }
 
-.galeria-main .galeria-by {
-  font-size: 1.1rem;
-  color: white;
-  font-weight: lighter;
+.galeria-main .img-cont .img .img__img,
+.galeria-main .img-cont .img .img__img--mod {
+  width: 80%;
+  background-color: antiquewhite;
+  padding: 1rem 1rem 5rem 1rem;
+  margin-top: 5rem;
 }
 
-.galeria-main .galeria-by .galeria-link {
-  color: white;
-  text-decoration: none;
+.galeria-main .img-cont .img .img__img--mod {
+  background-color: black;
 }
 
-.galeria-main .galeria-by .galeria-link:hover {
-  color: black;
-  transition: 0.7s;
+.carta-main {
+  grid-area: carta-main;
 }
 
-.galeria-main .carousel {
-  width: 90%;
-  margin-right: 2rem;
+.carta-main .entradas,
+.carta-main .principales,
+.carta-main .bebidas,
+.carta-main .postres,
+.carta-main .cafeteria {
+  background-color: rgba(0, 0, 0, 0.621);
+  font-family: "Roboto", sans-serif;
+  font-size: 1.3rem;
+  font-weight: 300;
+  margin: 2rem 1rem;
+  border-bottom: 10px solid #a99561f1;
+  border-left: 2px solid #ffffff;
 }
 
-.galeria-main .carousel .carousel-inner .carousel-item .carousel__img {
-  width: 100%;
+.carta-main .entradas .table .table__h1,
+.carta-main .principales .table .table__h1,
+.carta-main .bebidas .table .table__h1,
+.carta-main .postres .table .table__h1,
+.carta-main .cafeteria .table .table__h1 {
+  text-decoration: underline;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #a99561f1;
+}
+
+.carta-main .entradas .table td,
+.carta-main .principales .table td,
+.carta-main .bebidas .table td,
+.carta-main .postres .table td,
+.carta-main .cafeteria .table td {
+  color: #ffffff;
+  border: none;
+}
+
+.carta-main .suggestion {
+  display: none;
+}
+
+.recetas-main {
+  grid-area: recetas-main;
+}
+
+.recetas-main .receta,
+.recetas-main .receta--mod {
+  background-color: #7b7d50df;
+  padding: 1rem;
+  margin: 2rem 0;
+  border-bottom: 10px solid #ffffff;
+  border-right: 5px solid #101010;
+}
+
+.recetas-main .receta .receta__title,
+.recetas-main .receta--mod .receta__title {
+  text-decoration: underline;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #101010;
+}
+
+.recetas-main .receta .receta__list,
+.recetas-main .receta--mod .receta__list {
+  color: #ffffff;
+  font-size: 1.3rem;
+}
+
+.recetas-main .receta .receta__steps,
+.recetas-main .receta--mod .receta__steps {
+  margin-bottom: 1rem;
+}
+
+.recetas-main .receta .receta__img,
+.recetas-main .receta--mod .receta__img {
+  display: none;
+}
+
+.recetas-main .receta--mod {
+  border-top: 10px solid #ffffff;
+  border-bottom: none;
+}
+
+.nosotros-main {
+  grid-area: nosotros-main;
+}
+
+.nosotros-main .text {
+  background-color: #7b7d50df;
+  margin: 2rem 0;
+  border-bottom: 10px solid #ffffff;
+  border-right: 5px solid #101010;
+}
+
+.nosotros-main .text .text__title,
+.nosotros-main .text .text__paragraph,
+.nosotros-main .text .text__welcome {
+  color: #ffffff;
+  font-family: "Roboto", sans-serif;
+  padding: 1.3rem;
+}
+
+.nosotros-main .text .text__title {
+  color: #101010;
+  font-size: 3rem;
+  font-weight: 400;
+}
+
+.nosotros-main .text .text__divisor {
+  background-color: #101010;
+  width: 5rem;
+  height: 0.2rem;
+  margin-left: 1.3rem;
+}
+
+.nosotros-main .text .text__paragraph {
+  font-size: 1.2rem;
+  font-weight: 300;
+  line-height: 2rem;
+}
+
+.nosotros-main .text .text__welcome {
+  font-weight: 400;
 }
 
 .footer {
@@ -164,7 +287,9 @@
 
 .footer .footer__cont {
   display: flex;
+  flex-direction: row;
   justify-content: space-around;
+  align-items: center;
 }
 
 .footer .footer__cont .footer__text {
@@ -185,22 +310,25 @@
   }
 
   .header .nav .menu {
-    position: absolute;
     height: auto;
-    width: 100%;
-    margin-left: 5rem;
-    background-color: transparent;
+    background: none;
+    display: flex;
+    align-items: center;
   }
 
   .header .nav .menu .navbar-nav {
-    background-color: rgba(0, 0, 0, 0.378);
+    margin-left: 5rem;
   }
 
   .header .nav .menu .navbar-nav a {
     color: white;
     padding: 0 2rem;
-    font-weight: lighter;
     margin-bottom: 1.2rem;
+  }
+
+  .header .nav .menu .navbar-nav a:hover {
+    color: #7b7d50df;
+    transition: 0.3s;
   }
 
   /*Footer*/
@@ -210,7 +338,17 @@
   }
 
   .footer .footer__cont .footer__text {
+    font-size: 1.5rem;
     padding: 0 2rem;
+  }
+
+  /*Aside*/
+  .aside {
+    padding-top: 2rem;
+  }
+
+  .aside .aside__social .aside__link {
+    font-size: 1.3rem;
   }
 
   /*Main-Index*/
@@ -228,38 +366,240 @@
 
   /*Main-Galeria*/
   .galeria-main {
-    margin-top: 2rem;
+    margin-top: 5rem;
   }
 
-  .galeria-main .carousel {
-    width: 85%;
+  .galeria-main .img-cont {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .galeria-main .img-cont .img {
+    width: 30%;
+    margin-bottom: 2rem;
+  }
+
+  .galeria-main .img-cont .img img {
+    width: 90%;
+  }
+
+  .galeria-main .img-cont .img img:hover {
+    transform: scale(1.2);
+    transition: 1s;
+  }
+
+  /*Main-Carta*/
+  .carta-main {
+    margin-top: 6rem;
+    display: grid;
+    grid-template-areas: "entradas suggestion"
+      "principales suggestion"
+      "bebidas suggestion"
+      "postres suggestion"
+      "cafeteria suggestion";
+    grid-template-columns: 2fr 1fr;
+  }
+
+  .carta-main .entradas,
+  .carta-main .principales,
+  .carta-main .bebidas,
+  .carta-main .postres,
+  .carta-main .cafeteria {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .carta-main .entradas .table,
+  .carta-main .principales .table,
+  .carta-main .bebidas .table,
+  .carta-main .postres .table,
+  .carta-main .cafeteria .table {
+    width: 80%;
+  }
+
+  .carta-main .entradas .table td,
+  .carta-main .principales .table td,
+  .carta-main .bebidas .table td,
+  .carta-main .postres .table td,
+  .carta-main .cafeteria .table td {
+    color: #ffffff;
+    border: none;
+    width: 100%;
+    text-align: left;
+  }
+
+  .carta-main .entradas {
+    grid-area: entradas;
+  }
+
+  .carta-main .principales {
+    grid-area: principales;
+  }
+
+  .carta-main .postres {
+    grid-area: postres;
+  }
+
+  .carta-main .bebidas {
+    grid-area: bebidas;
+  }
+
+  .carta-main .cafeteria {
+    grid-area: cafeteria;
+  }
+
+  .carta-main .suggestion {
+    display: block;
+    grid-area: suggestion;
+    color: #ffffff;
+    background-color: #7b7d50df;
+    height: fit-content;
+    padding: 1.5rem 1rem;
+    margin-top: 2rem;
+    margin-right: 2rem;
+    position: sticky;
+    top: 13rem;
+    box-shadow: 10px 10px 35px -6px rgba(0, 0, 0, 0.57);
+    -webkit-box-shadow: 10px 10px 35px -6px rgba(0, 0, 0, 0.57);
+    -moz-box-shadow: 10px 10px 35px -6px rgba(0, 0, 0, 0.57);
+  }
+
+  .carta-main .suggestion .suggestion__title {
+    color: #101010;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 2rem;
+  }
+
+  .carta-main .suggestion .suggestion__text {
+    font-size: 1.3rem;
+    font-weight: lighter;
+    color: antiquewhite;
+  }
+
+  .carta-main .suggestion .suggestion__img {
+    width: 100%;
+  }
+
+  /*Main-Recetas*/
+  .recetas-main {
+    margin-top: 6rem;
+  }
+
+  .receta,
+  .recetas-main .receta--mod {
+    width: 90%;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 0.5fr 2fr;
+  }
+
+  .receta .receta__title,
+  .recetas-main .receta--mod .receta__title {
+    grid-column: 1/3;
+  }
+
+  .receta .receta__list,
+  .recetas-main .receta--mod .receta__list {
+    grid-column: 1/2;
+    width: 90%;
+    margin-top: -2rem;
+  }
+
+  .receta .receta__img,
+  .recetas-main .receta--mod .receta__img {
+    display: block;
+    width: 100%;
+    grid-column: 2/3;
+    grid-row: 2/3;
+    align-self: center;
+    box-shadow: 10px 10px 35px -6px rgba(0, 0, 0, 0.57);
+    -webkit-box-shadow: 10px 10px 35px -6px rgba(0, 0, 0, 0.57);
+    -moz-box-shadow: 10px 10px 35px -6px rgba(0, 0, 0, 0.57);
+  }
+
+  /*Main-Nostros*/
+  .nosotros-main {
+    margin-top: 5rem;
+    width: 90%;
+  }
+
+  .nosotros-main .text .text__title {
+    font-size: 3rem;
+  }
+
+  .nosotros-main .text .text__paragraph {
+    font-size: 1.4rem;
+    line-height: 3rem;
+  }
+
+  .nosotros-main .text .text__welcome {
+    font-size: 1.8rem;
   }
 }
 
 /*Layout con Grid -index.html*/
 .grid-container-index {
   height: 100vh;
-  background-image: url(../img/backg.png);
+  background-image: url(../img/backg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
   display: grid;
-  grid-template-areas: "header header"
-    "aside index-main"
-    "footer footer";
+  grid-template-areas: "header header""aside index-main""footer footer";
   grid-template-rows: auto 1fr auto;
-  grid-template-columns: 1fr 3fr;
+  grid-template-columns: 0.5fr 3fr;
 }
 
 /*Layout con Grid -galeria.html*/
 .grid-container-galeria {
-  height: 100vh;
-  background-image: url(../img/backg.png);
+  background-image: url(../img/backg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
   display: grid;
-  grid-template-areas: "header header"
-    "aside galeria-main"
-    "footer footer";
+  grid-template-areas: "header header""aside galeria-main""footer footer";
   grid-template-rows: auto 1fr auto;
-  grid-template-columns: 1fr 3fr;
+  grid-template-columns: 0.5fr 3fr;
+}
+
+/*Layout con Grid -carta.html*/
+.grid-container-carta {
+  background-image: url(../img/backg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  display: grid;
+  grid-template-areas: "header header""aside carta-main""footer footer";
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: 0.5fr 3fr;
+}
+
+/*Layout con Grid -recetas.html*/
+.grid-container-recetas {
+  background-image: url(../img/backg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  display: grid;
+  grid-template-areas: "header header""aside recetas-main""footer footer";
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: 0.5fr 3fr;
+}
+
+.grid-container-nosotros {
+  background-image: url(../img/backg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  display: grid;
+  grid-template-areas: "header header""aside nosotros-main""footer footer";
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: 0.5fr 3fr;
 }

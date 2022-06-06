@@ -5,40 +5,41 @@
 }
 /*IMPORTS*/
 @import "base/variables";
+@import "base/mixin";
 @import "components/header";
 @import "components/aside";
 @import "components/main-index";
 @import "components/main-galeria";
+@import "components/main-carta";
+@import "components/main-recetas";
+@import "components/main-nosotros";
 @import "components/footer";
 @import "components/mediaqueris";
+
 
 /*Layout con Grid -index.html*/
 .grid-container-index{
     height: 100vh;
-    background-image: url(../img/backg.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    display: grid;
-    grid-template-areas: 
-    "header header"
-    "aside index-main"
-    "footer footer";
-    grid-template-rows: auto 1fr auto;
-    grid-template-columns: 1fr 3fr;
-    
+    @include grid-layOut ("header header" "aside index-main" "footer footer");
 }
+
 /*Layout con Grid -galeria.html*/
 .grid-container-galeria{
-    height: 100vh;
-    background-image: url(../img/backg.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    display: grid;
-    grid-template-areas: 
-    "header header"
-    "aside galeria-main"
-    "footer footer";
-    grid-template-rows: auto 1fr auto;
-    grid-template-columns: 1fr 3fr;
-    
+    @include grid-layOut ("header header" "aside galeria-main" "footer footer");
 }
+
+/*Layout con Grid -carta.html*/
+.grid-container-carta{
+    @include grid-layOut ("header header" "aside carta-main" "footer footer");
+}
+
+/*Layout con Grid -recetas.html*/
+.grid-container-recetas{
+    @include grid-layOut ("header header" "aside recetas-main" "footer footer");
+}
+
+.grid-container-nosotros {
+    @include grid-layOut ("header header" "aside nosotros-main" "footer footer");
+}
+
+

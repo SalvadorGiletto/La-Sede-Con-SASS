@@ -1,17 +1,18 @@
 /*Estilos del aside (mobile first)*/
 .aside {
+    height: 80vh;
     grid-area: aside;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: flex-start;
-    margin-left: -1rem;
+    @include flex (flex, column, space-around, flex-start);
+
     .aside__social {
         transform: rotate(-90deg);
         .aside__link {
             text-decoration: none;
-            color: #ffffff;
-            font-family: 'Roboto', sans-serif;
+            color: $primary-color;
+            font-family: $font-family;
+            font-weight: 400;
         }
     }
 }
+
+

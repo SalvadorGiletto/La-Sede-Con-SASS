@@ -1,0 +1,32 @@
+.recetas-main{
+    grid-area: recetas-main;
+    .receta{
+        background-color: $bg-color-alt;
+        padding: 1rem;
+        margin: 2rem 0;
+        border-bottom: 10px solid $primary-color;
+        border-right: 5px solid $secundary-color;
+        .receta__title{
+            text-decoration: underline;
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: $secundary-color;
+        }
+        .receta__list{
+            color: $primary-color;
+            font-size: 1.3rem;
+        }
+        .receta__steps{
+            margin-bottom: 1rem;
+        }
+        .receta__img {
+            display: none;
+        }
+        
+    }
+    .receta--mod {
+        @extend .receta;
+        border-top: 10px solid $primary-color;
+        border-bottom: none;
+    }
+}

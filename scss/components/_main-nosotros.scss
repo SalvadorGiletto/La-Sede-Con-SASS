@@ -1,0 +1,33 @@
+.nosotros-main {
+    grid-area: nosotros-main;
+    .text{
+        background-color: $bg-color-alt;
+        margin: 2rem 0;
+        border-bottom: 10px solid $primary-color;
+        border-right: 5px solid $secundary-color;
+        .text__title, .text__paragraph, .text__welcome{
+            color: $primary-color;
+            font-family: $font-family;
+            padding: 1.3rem;
+        }
+        .text__title{
+            color: $secundary-color;
+            font-size: $title-size;
+            font-weight: 400;
+        }
+        .text__divisor {
+            background-color: $secundary-color;
+            width: 5rem;
+            height: 0.2rem;
+            margin-left: 1.3rem;
+        }
+        .text__paragraph{
+            font-size: 1.2rem;
+            font-weight: 300;
+            line-height: 2rem;
+        }
+        .text__welcome {
+            font-weight: 400;
+        }
+    }
+}
