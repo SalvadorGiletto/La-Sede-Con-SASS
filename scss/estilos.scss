@@ -19,7 +19,6 @@
 
 /*Layout con Grid -index.html*/
 .grid-container-index{
-    height: 100vh;
     @include grid-layOut ("header header" "aside index-main" "footer footer");
 }
 

@@ -1,10 +1,11 @@
+/*Estilos del main-recetas (mobile first)*/
 .recetas-main{
     grid-area: recetas-main;
     .receta{
         background-color: $bg-color-alt;
         padding: 1rem;
         margin: 2rem 0;
-        border-bottom: 10px solid $primary-color;
+        border-bottom: 10px solid antiquewhite;
         border-right: 5px solid $secundary-color;
         .receta__title{
             text-decoration: underline;
@@ -24,9 +25,10 @@
         }
         
     }
+
     .receta--mod {
         @extend .receta;
-        border-top: 10px solid $primary-color;
+        border-top: 10px solid antiquewhite;
         border-bottom: none;
     }
 }
