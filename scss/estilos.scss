@@ -24,6 +24,7 @@
 
 /*Layout con Grid -galeria.html*/
 .grid-container-galeria{
+    
     @include grid-layOut ("header header" "aside galeria-main" "footer footer");
 }
 

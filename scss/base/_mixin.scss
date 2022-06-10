@@ -6,6 +6,8 @@
 }
 
 @mixin grid-layOut ($grid-area){
+    max-width: 100vw;
+    overflow: hidden;
     background-image: url(../img/backg.jpg);
     background-repeat: no-repeat;
     background-size: cover;
