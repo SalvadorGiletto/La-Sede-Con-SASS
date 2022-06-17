@@ -1,34 +1,37 @@
 /*Estilos del main-nosotros (mobile first)*/
 .nosotros-main {
     grid-area: nosotros-main;
+    width: 95%;
+    margin-bottom: 2rem;
     .text{
         background-color: $bg-color-alt;
-        margin: 2rem 0;
         border-bottom: 10px solid $primary-color;
         border-right: 5px solid $secundary-color;
-        .text__title, .text__paragraph, .text__welcome{
-            color: $primary-color;
-            font-family: $font-family;
-            padding: 1.3rem;
-        }
         .text__title{
             color: $secundary-color;
             font-size: $title-size;
+            font-family: $font-family;
             font-weight: 400;
+            padding: 1.3rem;
+            text-align: center;
         }
-        .text__divisor {
-            background-color: $secundary-color;
-            width: 5rem;
-            height: 0.2rem;
-            margin-left: 1.3rem;
-        }
-        .text__paragraph{
-            font-size: 1.2rem;
-            font-weight: 300;
-            line-height: 2rem;
-        }
-        .text__welcome {
-            font-weight: 400;
+    }
+    .team{
+        background-color: $bg-color;
+        .team__cont{
+            @include flex (flex, column, space-around, center);
+            color: #fff;
+            padding-top: 2rem;
+            .team__img{
+                border: 5px solid white;
+                border-radius: 1000px;
+            }
+            .team__subtitle {
+                font-family: $font-family;
+                font-weight: lighter;
+                font-size: 2rem;
+                padding-top: 0.8rem;
+            }
         }
     }
 }

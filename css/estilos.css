@@ -163,31 +163,37 @@
 
 /*Estilos del main-nosotros (mobile first)*/
 .nosotros-main {
-  grid-area: nosotros-main; }
+  grid-area: nosotros-main;
+  width: 95%;
+  margin-bottom: 2rem; }
   .nosotros-main .text {
     background-color: #7b7d50df;
-    margin: 2rem 0;
     border-bottom: 10px solid #ffffff;
     border-right: 5px solid #101010; }
-    .nosotros-main .text .text__title, .nosotros-main .text .text__paragraph, .nosotros-main .text .text__welcome {
-      color: #ffffff;
-      font-family: "Roboto", sans-serif;
-      padding: 1.3rem; }
     .nosotros-main .text .text__title {
       color: #101010;
       font-size: 3rem;
-      font-weight: 400; }
-    .nosotros-main .text .text__divisor {
-      background-color: #101010;
-      width: 5rem;
-      height: 0.2rem;
-      margin-left: 1.3rem; }
-    .nosotros-main .text .text__paragraph {
-      font-size: 1.2rem;
-      font-weight: 300;
-      line-height: 2rem; }
-    .nosotros-main .text .text__welcome {
-      font-weight: 400; }
+      font-family: "Roboto", sans-serif;
+      font-weight: 400;
+      padding: 1.3rem;
+      text-align: center; }
+  .nosotros-main .team {
+    background-color: rgba(0, 0, 0, 0.621); }
+    .nosotros-main .team .team__cont {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      color: #fff;
+      padding-top: 2rem; }
+      .nosotros-main .team .team__cont .team__img {
+        border: 5px solid white;
+        border-radius: 1000px; }
+      .nosotros-main .team .team__cont .team__subtitle {
+        font-family: "Roboto", sans-serif;
+        font-weight: lighter;
+        font-size: 2rem;
+        padding-top: 0.8rem; }
 
 /*Estilos del footer (mobile first)*/
 .footer {
@@ -350,32 +356,15 @@
   /*Main-Nostros*/
   .nosotros-main {
     width: 90%;
-    margin-top: 5rem; }
-    .nosotros-main .text {
+    margin-top: 6rem; }
+    .nosotros-main .text .text__title {
+      font-weight: 500;
+      font-size: 3rem;
+      font-family: "Roboto", sans-serif;
+      letter-spacing: 0.3rem; }
+    .nosotros-main .team {
       display: grid;
-      grid-template-columns: 0.5fr 2fr;
-      justify-content: center;
-      align-items: center;
-      column-gap: 2rem; }
-      .nosotros-main .text .text__title {
-        grid-column: 1/2;
-        align-self: flex-start;
-        font-size: 3rem;
-        font-weight: bold;
-        margin-left: 3rem;
-        margin-top: 2rem;
-        padding-right: 4rem;
-        border-right: 3px solid #101010; }
-      .nosotros-main .text .text__paragraph {
-        grid-column: 2/3;
-        font-size: 1.4rem;
-        line-height: 3rem;
-        margin-top: 2rem;
-        margin-right: 2rem; }
-      .nosotros-main .text .text__welcome {
-        grid-column: 2/3;
-        font-size: 1.8rem;
-        margin-right: 2rem; } }
+      grid-template-columns: 1fr 1fr; } }
 
 /*Layout con Grid -index.html*/
 .grid-container-index {
